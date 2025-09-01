@@ -1,79 +1,73 @@
-# Sistema Operativo GARLIC 2.0 para NDS 🕹️🍄
+# 🕹️🍄 GARLIC 2.0 Operating System for NDS 
 
-Aquest projecte és una implementació bàsica del sistema operatiu **GARLIC 2.0** per la consola Nintendo DS, programat en C i totalment desenvolupat per ARM. Utilitza la biblioteca GARLIC API per gestionar processos, interrupcions i recursos de la consola.
-
----
-
-## 🚀 Característiques principals
-
-- Inicialització del sistema gràfic i sistema de fitxers.
-- Gestió de timers i interrupcions (VBlank i TIMER0).
-- Monitorització i impressió de l'ús de la CPU per diferents processos.
-- Càrrega i execució de programes "HOLA" i "PONG" segons la tecla que es premi (A o B).
-- Creació i gestió de fins a 3 processos simultanis.
-- Eliminació controlada de processos després d'un temps específic.
-- Espera i sincronització amb el refresc vertical (VBlank).
-- Funcions específiques per a visualització i control gràfic de l'estat del sistema.
+## 📋 Project Description
+This project is a basic implementation of the **GARLIC 2.0 operating system** for the Nintendo DS console, programmed entirely in C for ARM.  
+It uses the **GARLIC API** to manage processes, interrupts, and system resources.
 
 ---
 
-## 🛠️ Estructura i funcionalitats del codi
-
-- **`inicializarSistema()`**: Inicialitza gràfics, llavors aleatòries, sistema de fitxers i configuració d’interrupcions.
-- **`porcentajeUso()`**: Mostra per consola l’ús de CPU de cada procés, sincronitzant amb TIMER0.
-- **`main()`**:
-  - Inicialitza el sistema.
-  - Mostra missatges d'inici i instruccions per l'usuari.
-  - Detecta si es prem la tecla A o B.
-  - Carrega i crea processos dels programes corresponents.
-  - Gestiona el cicle de vida dels processos (espera, eliminació).
-  - Manté el sistema en execució en un bucle infinit.
+## 🚀 Main Features
+- Initialization of graphics and file system.  
+- Management of timers and interrupts (VBlank and TIMER0).  
+- Monitoring and printing CPU usage per process.  
+- Loading and execution of "HOLA" and "PONG" programs depending on key press (A or B).  
+- Creation and management of up to 3 concurrent processes.  
+- Controlled termination of processes after a specific time.  
+- Waiting and synchronization with vertical refresh (VBlank).  
+- Functions for graphical display and system status control.
 
 ---
 
-## 📋 Com utilitzar
-
-1. Compilar el projecte per la plataforma NDS amb el compilador ARM adequat.
-2. Copiar els fitxers binaris dels programes `HOLA` i `PONG` al sistema de fitxers.
-3. Executar el sistema a la NDS.
-4. Prem la tecla:
-   - **A** per carregar i executar tres instàncies del programa "HOLA".
-   - **B** per carregar i executar tres instàncies del programa "PONG".
-5. El sistema mostra l’ús de CPU i elimina processos automàticament després del temps definit.
-6. El sistema queda en un estat d'espera indefinida al final.
-
----
-
-## 🔧 Requisits i dependències
-
-- Nintendo DS o emulador compatible.
-- GARLIC API i sistema Garlic (basat en ARM).
-- Fitxers de programa `HOLA` i `PONG` disponibles en el sistema de fitxers.
+## 🛠️ Code Structure and Functions
+- **inicializarSistema()**: Initializes graphics, random seeds, file system, and interrupt configuration.  
+- **porcentajeUso()**: Displays CPU usage per process on the console, synchronized with TIMER0.  
+- **main()**:  
+  - Initializes the system.  
+  - Shows startup messages and user instructions.  
+  - Detects key presses (A or B).  
+  - Loads and creates processes for the corresponding programs.  
+  - Manages process lifecycle (waiting, termination).  
+  - Keeps the system running in an infinite loop.
 
 ---
 
-## 📚 Referències
-
-Aquest sistema és una pràctica educativa d’un sistema operatiu simplificat per entorns embeguts amb recursos limitats, utilitzant interrupcions, multitarea i gestió bàsica de processos.
+## 📋 Usage
+1. Compile the project for the NDS platform using the appropriate ARM compiler.  
+2. Copy the binary files for the programs **HOLA** and **PONG** to the file system.  
+3. Run the system on the NDS.  
+4. Press a key:  
+   - **A**: Load and run three instances of the "HOLA" program.  
+   - **B**: Load and run three instances of the "PONG" program.  
+5. The system displays CPU usage and automatically terminates processes after the defined time.  
+6. The system remains in an indefinite wait state at the end.
 
 ---
 
-## 🎯 Objectiu
+## 🔧 Requirements and Dependencies
+- Nintendo DS console or compatible emulator.  
+- GARLIC API and GARLIC system (ARM-based).  
+- Program files **HOLA** and **PONG** available in the file system.
 
-Demostrar gestió bàsica de processos, sincronització per interrupcions i utilització dels recursos de la consola Nintendo DS mitjançant un sistema operatiu propi.
+---
+
+## 📚 References
+This system is an educational exercise for a simplified operating system for embedded environments with limited resources, using interrupts, multitasking, and basic process management.
+
+---
+
+## 🎯 Objective
+Demonstrate basic process management, interrupt-based synchronization, and utilization of Nintendo DS console resources through a custom operating system.
 
 ---
 
 ## 📝 Notes
-
-Aquest projecte està totalment desenvolupat en ARM amb suport per GARLIC API, i no inclou codi en altres llenguatges. Ideal per qui vulgui aprendre sobre sistemes operatius embeguts i programació a baix nivell en consoles portàtils.
-
----
-
-## 💡 Contacte
-
-Per dubtes o consultes, obre un issue o contacta amb el desenvolupador.
+- Fully developed in ARM with GARLIC API support.  
+- No other languages used.  
+- Ideal for learning about embedded operating systems and low-level programming on portable consoles.
 
 ---
 
-**Gaudeix programant! 🍄✨**
+## 💡 Contact
+For questions or inquiries, open an issue or contact the developer.
+
+Enjoy programming! 🍄✨
